@@ -1840,10 +1840,10 @@ static struct sk_buff *__skb_clone(struct sk_buff *n, struct sk_buff *skb)
 	C(in_dev);
 #endif /* CONFIG_BCM_KF_NBUFF */
 
-#if defined(CONFIG_BCM_KF_80211) && (defined(CONFIG_MAC80211) || defined(CONFIG_MAC80211_MODULE))
-	C(do_not_encrypt);
-	C(requeue);
-#endif
+//#if defined(CONFIG_BCM_KF_80211) && (defined(CONFIG_MAC80211) || defined(CONFIG_MAC80211_MODULE))
+//	C(do_not_encrypt);
+//	C(requeue);
+//#endif
 	atomic_set(&n->users, 1);
 
 	atomic_inc(&(skb_shinfo(skb)->dataref));
